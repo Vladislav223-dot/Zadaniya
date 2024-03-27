@@ -1,0 +1,60 @@
+<html>
+<head>
+  <style>
+    div:nth-child(3n) {
+      color: red;
+    }
+  </style>
+  <script type="application/javascript">
+    document.addEventListener("DOMContentLoaded", function() {
+      const NUM_ELEMENTS = 1000;
+      const REMOVAL_COUNT = 200;
+
+      const startTime = new Date().getTime();
+
+      const body = document.body;
+      const fragment = document.createDocumentFragment();
+      const divsArray = [];
+
+      for (let i = 0; i < NUM_ELEMENTS; i++) {
+        const div = document.createElement('div');
+        const divId = "div-" + i;
+        div.setAttribute('id', divId);
+        div.textContent = "div #" + i;
+
+        divsArray.push(div);
+      }
+
+      for (let j = NUM_ELEMENTS - 1; j >= 0; j -= 2) {
+        fragment.appendChild(divsArray[j]);
+      }
+
+      for (let k = 0; k < NUM_ELEMENTS; k += 2) {
+        const currentDiv = divsArray[k];
+        fragment.appendChild(currentDiv);
+
+        if (k % 2 !== 0) {
+          currentDiv.style.color = "red";
+        }
+      }
+
+      // Вставка fragment в body
+      body.appendChild(fragment);
+
+      for (let l = 0; l < REMOVAL_COUNT; l++) {
+        const randomIndex = Math.floor(Math.random() * divsArray.length);
+        const divToRemove = divsArray.splice(randomIndex, 1)[0];
+
+        divToRemove.parentNode.removeChild(divToRemove);
+      }
+
+      const endTime = new Date().getTime();
+      const elapsedTime = endTime - startTime;
+      console.log("Elapsed time:", elapsedTime, "milliseconds");
+
+      console.log("Remaining elements:", divsArray.length);
+    });
+  </script>
+</head>
+<body></body>
+</html>

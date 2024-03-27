@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="styles/block/page.css">
+	<link rel="stylesheet" href="styles/block/main-container.css">
+	<link rel="stylesheet" href="styles/block/advantages.css">
+	<link rel="stylesheet" href="styles/block/list-counter.css">
+	<link rel="stylesheet" href="styles/block/list-company.css">
+	<link rel="stylesheet" href="styles/block/programm.css">
+	<link rel="stylesheet" href="styles/block/list-parametr.css">
+	<link rel="stylesheet" href="styles/global/global.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <title>Счётчик и рейтинг</title>
+</head>
+
+<body class="page__body">
+	<main class="main-container">
+		<h1 class="visually-hidden">Преимущества и программы компании</h1>
+		<section class="advantages">
+			<h2 class="visually-hidden">Преимущества компании</h2>
+			<ul class="advantages__list list-counter">
+				<a class="list-counter__link list-counter__link--rewiew" href="#!">
+					<li class="list-counter__item">
+						<p class="list-counter__item-number">165</p> 
+						<span class="list-counter__item-description">отзывов</span>
+					</li>
+				</a>
+				<a class="list-counter__link list-counter__link--ignored" href="#!">
+					<li class="list-counter__item">
+						<p class="list-counter__item-number">21</p> 
+						<span class="list-counter__item-description">неотвеченный отзыв</span>
+					</li>
+				</a>
+				<a class="list-counter__link list-counter__link--update" href="#!">
+					<li class="list-counter__item">
+						<p class="list-counter__item-number">50</p> 
+						<span class="list-counter__item-description">обновлений</span>
+					</li>
+				</a>
+				<a class="list-counter__link list-counter__link--rating" href="#!">
+					<li class="list-counter__item">
+						<p class="list-counter__item-number">4,5</p> 
+						<span class="list-counter__item-description">средний рейтинг</span>
+					</li>
+				</a>
+			</ul>
+		</section>
+		<section class="programm">
+			<h2 class="visually-hidden">Программы предлагаемые компанией</h2>
+			<ul class="programm__list list-company">
+				<li class="list-company__item list-company__item--active">
+					<div class="list-company__item-header">
+						<p class="list-company__item-description">
+							<strong>Google</strong>
+							<span class="list-company__item-refining"><sub class="list-counter__item-point">&#149;</sub> все 30 заведений настроены</span>
+						</p>
+						<button class="list-company__toggle" type="button">
+							<span class="visually-hidden">Просмотреть дополнительную информацию</span>
+						</button>
+					</div>
+					<ul class="list-company__item-list list-parametr">
+						<li class="list-parametr__item list-parametr__item--complited">Синхронизировано</li>
+						<li class="list-parametr__item">Инфа</li>
+						<li class="list-parametr__item">Прайс</li>
+						<li class="list-parametr__item">Фото</li>
+						<li class="list-parametr__item">Акции</li>
+					</ul>
+					<p class="list-company__item-rating">
+						<span class="list-company__item-stars">4.5 из 5</span>
+						<sub class="list-company__item-point">&#149;</sub> 
+						198 отзывов, 15 неотвеченных
+						<a class="list-company__item-link list-company__item-link--active" href="#!">2 обновления</a>
+					</p>
+				</li>
+				<li class="list-company__item list-company__item--active">
+					<div class="list-company__item-header">
+						<p class="list-company__item-description">
+							<strong>Flado</strong>
+							<span class="list-company__item-refining">
+								<sub class="list-counter__item-point">&#149;</sub>
+								30 заведений 
+								<sub class="list-counter__item-point">&#149;</sub>
+								4 настроено 
+								<sub class="list-counter__item-point">&#149;</sub>
+								20 в поиске
+							</span>
+						</p>
+						<button class="list-company__toggle" type="button">
+							<span class="visually-hidden">Просмотреть дополнительную информацию</span>
+						</button>
+					</div>
+					<ul class="list-company__item-list list-parametr">
+						<li class="list-parametr__item list-parametr__item--loaging">Создаём 3 страниц</li>
+						<li class="list-parametr__item">Инфа</li>
+						<li class="list-parametr__item">Прайс</li>
+						<li class="list-parametr__item">Фото</li>
+						<li class="list-parametr__item">Акции</li>
+					</ul>
+					<p class="list-company__item-rating list-company__item-rating--off">
+						Портал без рейтинга
+						<a class="list-company__item-link list-company__item-link--defolt" href="#!">Требует действий</a>
+					</p>
+				</li>
+				<li class="list-company__item list-company__item--off">
+					<div class="list-company__item-header">
+						<p class="list-company__item-description"><strong>2Gis</strong></p>
+						<button class="list-company__toggle" type="button">
+							<span class="visually-hidden">Просмотреть дополнительную информацию</span>
+						</button>
+					</div>
+					<div class="list-company__item-make list-parametr__item-make--loaging">Создаём 3 страницы</div>
+					<p class="list-company__item-rating list-company__item-rating--off">
+						Поиск заведений 15 из 78...
+						<a class="list-company__item-link list-company__item-link--defolt" href="#!">Требует действий</a>
+					</p>
+				</li>
+				<li class="list-company__item list-company__item--off">
+					<div class="list-company__item-header">
+						<p class="list-company__item-description"><strong>Yell</strong></p>
+						<button class="list-company__toggle" type="button">
+							<span class="tooltip">Включить</span>
+						</button>
+					</div>
+					<p class="list-company__item-rating list-company__item-rating--off">Площадка отключена</p>
+				</li>
+			</ul>
+		</section>
+	</main>
+</body>

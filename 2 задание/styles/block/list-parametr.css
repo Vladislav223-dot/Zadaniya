@@ -1,0 +1,69 @@
+.list-parametr {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+.list-parametr__item {
+  border: 1px solid rgb(213, 224, 228);
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.list-parametr__item:hover {
+  background-color: rgb(212, 170, 250);
+}
+
+.list-parametr__item::before {
+  content: "✓";
+  margin-right: 5px;
+}
+
+.list-parametr__item:not(:last-child) {
+  margin-right: 5px;
+}
+
+.list-parametr__item--complited {
+  background-color: rgb(84,1,155);
+  color: #ffffff;
+}
+
+.list-parametr__item--complited::before {
+  content: "✓";
+  margin-right: 5px;
+}
+
+.list-parametr__item--loaging {
+  position: relative;
+  padding-left: 30px;
+}
+
+.list-parametr__item--complited:hover {
+ background-color: rgb(68, 2, 127);
+}
+
+.list-parametr__item--loaging::before {
+  content: url("../../images/icons/double-arrows.svg");
+  width: 30px;
+  height: 30px;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.list-parametr__item-make--loaging {
+  position: relative;
+  padding-left: 25px;
+}
+
+.list-parametr__item-make--loaging::before {
+  content: url("../../images/icons/double-arrows.svg");
+  width: 30px;
+  height: 30px;
+  display: block;
+  position: absolute;
+  left: -5px;
+  top: -5px;
+}
